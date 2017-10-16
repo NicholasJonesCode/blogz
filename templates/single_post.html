@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% for post in the_post %}
+
+<u><h2>{{ post.title }}</h2></u>
+<p>{{ post.body }}</p>
+
+<br>
+
+<div style="float:left; padding: 3px">
+    <form method='post' action="/deletepost">
+        <input type="hidden" name="post-id" value='{{post.id}}'>
+        <input type="submit" value='Delete This Post'>
+    </form>
+</div>
+
+{% endfor %}
+
+{% endblock %}

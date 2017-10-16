@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Create Blog Post</h1>
+
+{% with messages = get_flashed_messages() %}
+
+{% for message in messages %}
+<ul style="color:red"><li>{{message}}</li></ul>
+{% endfor %}
+
+{% endwith %}
+
+<form action="/newpost" method="post">
+
+<br>
+<div>
+    <label>Title:  <br>
+        <input name="title" type="text" value="{{title}}"/>
+    </label>
+</div>
+<br><br>
+
+<div>
+    <label>Blog Message:  <br>
+        <textarea name="body" cols="50" rows="10" >{{body}}</textarea>
+    </label>
+</div>
+<br>
+
+<div>
+    <input name='submit-post' type="submit" value="Post">
+</div>
+
+</form>
+
+
+{% endblock %}

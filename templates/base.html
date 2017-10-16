@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div style="float:left; padding: 5px">
+            <form action="/blog">
+                <input type="submit" value="Main Page">
+            </form>
+        </div>
+
+        <div style="float:left; padding: 5px">
+            <form action="/newpost">
+                <input type="submit" value="Create Post">
+            </form>
+        </div>
+        
+        <br>
+        <p></p>
+        <hr>
+        
+
+        {% block content %}
+        {% endblock %}
+    </body>
+
+</html>

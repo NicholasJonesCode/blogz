@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% with messages = get_flashed_messages() %}
+<ul>
+{% for message in messages %}
+<li>{{message}}</li>
+{% endfor %}
+</ul>
+{% endwith %}
+
+<u><h1>Build A Blog</h1></u>
+<p></p>
+
+{% if all_posts|length == 0 %}
+<p>No posts yet!</p>
+{% else %}
+
+{% for post in all_posts %}
+
+<a href="/singlepost?id={{post.id}}" style="color:rgb(158, 42, 253)">
+<h2>{{ post.title }}</h2>
+</a>
+
+<p>{{ post.body }}</p>
+
+<hr>
+{% endfor %}
+
+{% endif %}
+
+
+
+
+{% endblock %}
