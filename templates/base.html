@@ -1,22 +1,48 @@
 <!DOCTYPE html>
 <html>
     <body>
+
         <div style="float:left; padding: 5px">
-            <form action="/blog">
-                <input type="submit" value="Main Page">
+            <form action="/">
+                <input type="submit" value="Home">
             </form>
         </div>
 
         <div style="float:left; padding: 5px">
+            <form action="/blog">
+                <input type="submit" value="All Posts">
+            </form>
+        </div>
+        <!--
+        {% if loggeduserobj %}
+        <div style="float:left; padding: 5px">
+            <form action="/blog?userid={{loggeduserobj.id}}">
+                <input type="submit" value="My Posts">
+            </form>
+        </div>
+        {% endif %}
+        -->
+        <div style="float:left; padding: 5px">
             <form action="/newpost">
                 <input type="submit" value="Create Post">
+            </form>
+        </div>
+
+        <div style="float:right; padding: 5px">
+            <form action="/login">
+                <input type="submit" value="Log In">
+            </form>
+        </div>
+        
+        <div style="float:right; padding: 5px">
+            <form action="/logout">
+                <input type="submit" value="Log Out">
             </form>
         </div>
         
         <br>
         <p></p>
         <hr>
-        
 
         {% block content %}
         {% endblock %}

@@ -1,12 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
 
+<p>
+    {% if loggeduser|length > 0 %}
+    Logged in user: <br>
+    <b><u><a href="/blog?userid={{loggeduserobj.id}}">{{loggeduser}}</a></u></b>
+    {% else %}
+    <b><u>No user currently logged in.</u></b>
+</p>
+    {% endif %}
+<p></p>
+
 <h1>Create Blog Post</h1>
 
 {% with messages = get_flashed_messages() %}
 
 {% for message in messages %}
-<ul style="color:red"><li>{{message}}</li></ul>
+<ul style="color:rgb(99, 0, 212)"><li>{{message}}</li></ul>
 {% endfor %}
 
 {% endwith %}

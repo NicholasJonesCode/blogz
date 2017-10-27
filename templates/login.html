@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Log In to the Blogz xD</h1>
+
+{% with messages = get_flashed_messages() %}
+<ul>
+    {% for message in messages %}
+    <li style="color:red">{{message}}</li>
+    {% endfor %}
+</ul>
+{% endwith %}
+
+<form action="/login" method="post">
+    <label>Username: <input type="text" name="username"></label> <br> <br>
+    <label>Password: <input type="password" name="password"></label> <br> <br>
+    <input type="submit" name="submit">
+</form>
+<br>
+Are u a pleb without an account? <a href="/signup">GET ONE</a>
+
+{% endblock %}
