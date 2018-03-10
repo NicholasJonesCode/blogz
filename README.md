@@ -6,4 +6,4 @@ Written using:
 * Python for functionality
 * Jinja 2 for HTML templating
 * Flask web framework
-* MySQL and FlaskSQL for data management
+* MySQL and FlaskSQLAlchemy for data management
