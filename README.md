@@ -1,6 +1,6 @@
 # blogz
 
-A user-based program which allows user to create and delete blog posts, and also to view others'
+A web-based application which allows users to create and delete blog posts, and also to view others' posts. Includes secure user sign-up.
 
 Written using:
 * Python for functionality
