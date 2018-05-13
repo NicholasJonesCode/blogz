@@ -7,3 +7,5 @@ Written using:
 * Jinja 2 for HTML templating
 * Flask web framework
 * MySQL and FlaskSQLAlchemy for data management
+
+(Says forked from GentlemansKiller/blogz because that's my alt account)
